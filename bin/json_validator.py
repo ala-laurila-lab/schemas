@@ -7,7 +7,7 @@ import sys
 import urllib2
 
 class SimpleValidator(object):
-	""" Defines a class to load schema from url and parse json agains it.
+	""" Defines a class to load a schema from url and parse json against it.
 	Does not check anything and crashes on error so user can fix the cause :P
 	
 	Prints "<Filename> is valid" if succeeds
@@ -42,10 +42,10 @@ class SimpleValidator(object):
 		
 if __name__ == '__main__':
 	if len(sys.argv) != 2:
-		print('Takes the json file to check as only parameter. Prints "<Filename> is valid" if succeeds.')
+		print('Takes the json file to check as a parameter. Prints "<Filename> is valid" if succeeds.')
 		sys.exit(0)
 	
-	# the class will throw exception if file is not found
+	# the class will throw exception if file is not found so no checking
 	file_to_validate = sys.argv[1]
 	
 	try:
