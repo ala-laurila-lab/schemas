@@ -1,4 +1,13 @@
 {
-"$schema": "http://json-schema.org/draft-04/schema#",
-"id": "http://yourdomain.com/schemas/water-maze-experiment-videos-0.1.json"
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"id": "https://raw.githubusercontent.com/ala-laurila-lab/schemas/master/water-maze/water-maze-experiment-videos-0.1.json",
+	"title" : "water-maze-experiment-videos",
+	"type" : "object",
+	"properties" : {
+		"tracking_date" : {"type" : "string", "pattern" : "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description" : "For example 2017-10-13"},
+		"experiment_name" : {"type" : "string", "description" : "For example wt"},
+		"mouse_parser" : {"type" : "string", "description" : "Name of the class to parse hdf5 files"},
+		"log_parser" : {"type" : "string", "description" : "Name of the class to parse log files"}
+	},
+	"required": ["tracking_date", "experiment_name", "mouse_parser", "log_parser"]
 }
