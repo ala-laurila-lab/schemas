@@ -1,6 +1,6 @@
 {
-	"$schema": "http://json-schema.org/draft-06/schema#",
-	"id": "https://raw.githubusercontent.com/ala-laurila-lab/schemas/master/water-maze/water-maze-experiment-videos-0.1.json",
+	"$schema" : "http://json-schema.org/draft-06/schema#",
+	"id" : "https://raw.githubusercontent.com/ala-laurila-lab/schemas/master/water-maze/water-maze-experiment-videos-0.1.json",
 	"title" : "water-maze-experiment-videos",
 	"type" : "object",
 	"properties" : {
@@ -10,5 +10,5 @@
 		"log_parser" : {"type" : "string", "description" : "Name of the class to parse log files"},
 		"comments" : {"type" : "string", "description" : "Free form comments"}
 	},
-	"required": ["tracking_date", "experiment_name", "mouse_parser", "log_parser"]
+	"required" : ["tracking_date", "experiment_name", "mouse_parser", "log_parser"]
 }
