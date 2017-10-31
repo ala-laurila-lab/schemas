@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import jsonschema
+
 import json
+import yaml
+
 import sys
 import urllib2
 
@@ -19,8 +22,13 @@ class SimpleValidator(object):
 		"""
 		with open(file_to_validate, 'rb') as f:
 			# file to validate
-			parsed_file_to_validate = json.load(f)
-			
+			if file_to_validate.endswith('json'):
+				parsed_file_to_validate = json.load(f)
+			elif file_to_validate.endswith('yaml'):
+				parsed_file_to_validate = yaml.load(f, Loader=yaml.BaseLoader)
+			else:
+				raise ValueError('File should have an extension "json" or "yaml".')
+				
 			# get schema url and load it
 			schema_url = parsed_file_to_validate['$schema']
 			schema = self._load_schema_from_url(schema_url)
@@ -54,4 +62,6 @@ if __name__ == '__main__':
 		print(e)
 	except IOError as e:
 		print(e)
-	
+	except ValueError as e:
+		print(e)
+		
