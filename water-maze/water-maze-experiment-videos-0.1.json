@@ -8,6 +8,7 @@
 		"experiment_name" : {"type" : "string", "description" : "For example wt"},
 		"mouse_parser" : {"type" : "string", "description" : "Name of the class to parse hdf5 files"},
 		"log_parser" : {"type" : "string", "description" : "Name of the class to parse log files"}
+		"comments" : {"type" : "string", "description" : "Free form comments"}
 	},
 	"required": ["tracking_date", "experiment_name", "mouse_parser", "log_parser"]
 }
