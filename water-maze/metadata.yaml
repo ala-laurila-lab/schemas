@@ -1,5 +1,6 @@
-$schema: https://raw.githubusercontent.com/ala-laurila-lab/schemas/master/water-maze/water-maze-experiment-videos-0.1.json
+$schema: https://raw.githubusercontent.com/ala-laurila-lab/schemas/master/water-maze/water-maze-experiment-videos-0.2.json
 tracking_date : 2017-08-10
 experiment_name : OPN
 mouse_parser : MouseManuallyTracked_1_0
 log_parser : ''
+set_identifier : 'test_set'

@@ -1,0 +1,15 @@
+{
+	"$schema" : "http://json-schema.org/draft-06/schema#",
+	"id" : "https://raw.githubusercontent.com/ala-laurila-lab/schemas/master/water-maze/water-maze-experiment-videos-0.2.json",
+	"title" : "water-maze-experiment-videos",
+	"type" : "object",
+	"properties" : {
+		"tracking_date" : {"type" : "string", "pattern" : "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description" : "For example 2017-10-13"},
+		"experiment_name" : {"type" : "string", "description" : "For example wt"},
+		"mouse_parser" : {"type" : "string", "description" : "Name of the class to parse hdf5 files"},
+		"log_parser" : {"type" : "string", "description" : "Name of the class to parse log files"},
+		"set_identifier" : {"type" : "string", "description" : "Free form identifier to help separate files when analysing"},
+		"comments" : {"type" : "string", "description" : "Free form comments"}
+	},
+	"required" : ["tracking_date", "experiment_name", "mouse_parser", "log_parser"]
+}
